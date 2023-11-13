@@ -1,5 +1,7 @@
+import { Menu } from '@mui/material'
 import './App.css'
 import Header from './components/Header/Header'
+import Products from './components/Products/Products'
 import GlobalStyle from './components/UI/GlobalStyle'
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
     <>
       <GlobalStyle/>
       <Header/>
+      <Products/>
     </>
   )
 }

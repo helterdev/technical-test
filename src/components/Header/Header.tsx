@@ -39,6 +39,7 @@ const Button = styled.button`
     display: flex;
     align-items: center;
     column-gap: 4px;
+    cursor: pointer;
 `;
 
 
