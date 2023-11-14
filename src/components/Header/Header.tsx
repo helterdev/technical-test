@@ -42,6 +42,7 @@ const Button = styled.button`
     cursor: pointer;
 `;
 
+{/* <button className="btn btn-primary" type="button" >Toggle right offcanvas</button> */}
 
 const Header = () => {
     return (
@@ -52,7 +53,7 @@ const Header = () => {
                     <Title_2>Sistemas</Title_2>
                 </div>
                 <div>
-                    <Button type='button'>
+                    <Button type='button'data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <BsCartDashFill/>
                         1
                     </Button>

@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import ProductsList from "./ProductsList";
+import { useProducts } from "../../hooks/useProducts";
+import { ProductsApi } from "../../interfaces/products";
+import Loading from "../Loading/Loading";
+
 
 const Ul = styled.ul`
     display: flex;
@@ -15,21 +19,20 @@ const Ul = styled.ul`
     }
 `;
 
+
+
+
 const Products = () => {
+    
+    const query = useProducts();
+    const {data , isLoading} = query;
+    
     return (
         <section className="section-ul">
             <div className="container-ul">
-                <Ul>
-                    <ProductsList/>
-                    <ProductsList/>
-                    <ProductsList/>
-                    <ProductsList/>
-                    <ProductsList/>
-                    <ProductsList/>
-                    <ProductsList/>
-                    <ProductsList/>
-
-                </Ul>
+            <Ul>
+                {isLoading ? <Loading/> : data.map((product : ProductsApi) => { return <ProductsList products={product} key={product.id}/>})}
+            </Ul>
             </div>
         </section>
     )
