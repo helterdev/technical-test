@@ -4,6 +4,8 @@ import { info_color, price_color, text_primary } from "../UI/Variables";
 import Button from "../Button/Button";
 import { ProductsApi } from "../../interfaces/products";
 
+
+
 const List = styled.li`
     width: 15.625em;
     /* height: 20.5em; */
@@ -40,14 +42,14 @@ const Info = styled(Div)`
     padding-right: 1em;
 `;
 
-const H3 = styled.h3`
+export const H3 = styled.h3`
     font-weight: 400;
     font-size: 16px;
     color: ${info_color};
     margin: 0;
 `;
 
-const Span = styled.span`
+export const Span = styled.span`
     color: ${text_primary};
     background-color: ${price_color};
     font-size: 15px;
@@ -68,7 +70,8 @@ interface Props {
 }
 
 const ProductsList = ({products} : Props) => {
-    const {name, photo, description} = products;
+    const {name, photo, description, price} = products;
+    const priceInt = parseInt(price);
     return (
         <List>
             <DivContainer>
@@ -81,7 +84,7 @@ const ProductsList = ({products} : Props) => {
                             {name}
                         </H3>
                     </div>
-                    <Span>R$399</Span>
+                    <Span>R${priceInt}</Span>
                 </Info>
                 <Info>
                     <P>
@@ -89,7 +92,7 @@ const ProductsList = ({products} : Props) => {
                     </P>
                 </Info>
                 <div className="container-button">
-                    <Button/>
+                    <Button products={products}/>
                 </div>
             </DivContainer>
         </List>

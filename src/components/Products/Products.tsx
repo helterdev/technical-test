@@ -5,6 +5,7 @@ import { ProductsApi } from "../../interfaces/products";
 import Loading from "../Loading/Loading";
 
 
+
 const Ul = styled.ul`
     display: flex;
     flex-direction: column;
@@ -23,15 +24,15 @@ const Ul = styled.ul`
 
 
 const Products = () => {
-    
     const query = useProducts();
-    const {data , isLoading} = query;
+    const {data , isLoading} = query;    
     
     return (
         <section className="section-ul">
             <div className="container-ul">
             <Ul>
-                {isLoading ? <Loading/> : data.map((product : ProductsApi) => { return <ProductsList products={product} key={product.id}/>})}
+                {isLoading ? <Loading/> :  data.map((product : ProductsApi) => { return <ProductsList products={product} key={product.id} />}) }
+                {/* isLoading ? <Loading/> */}
             </Ul>
             </div>
         </section>

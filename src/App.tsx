@@ -3,6 +3,7 @@ import Header from './components/Header/Header'
 import Products from './components/Products/Products'
 import SideBars from './components/SideBars/SideBars'
 import GlobalStyle from './components/UI/GlobalStyle'
+import { ProductsProvider } from './context/ProductsContext'
 
 function App() {
   // const get = async () => {
@@ -17,9 +18,12 @@ function App() {
   return (
     <>
       <GlobalStyle/>
+      <ProductsProvider>
       <Header/>
       <Products/>
       <SideBars/>
+      </ProductsProvider>
+      
     </>
   )
 }

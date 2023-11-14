@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import { bg_primary, text_primary } from "../UI/Variables";
+import { ProductsApi } from "../../interfaces/products";
+import { useContext } from "react";
+import { ProductsContext } from "../../context/ProductsContext";
+
 
 const ButtonCart = styled.button`
     width: 100%;
@@ -19,10 +23,16 @@ const ButtonCart = styled.button`
     font-family: 'Montserrat';
     cursor: pointer;
 `;
+interface Props {
+    products: ProductsApi
+}
 
-const Button = () => {
+const Button = ({products} : Props) => {
+    
+    const {addProducts} = useContext(ProductsContext);
+    
     return (
-        <ButtonCart type="button">
+        <ButtonCart type="button" onClick={() => addProducts(products)}>
              <img src="./shopping-bag.svg" alt="shopping" /> Comprar
         </ButtonCart>
     )
