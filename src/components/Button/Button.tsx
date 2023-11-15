@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { bg_primary, text_primary } from "../UI/Variables";
-import { ProductsApi } from "../../interfaces/products";
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
 import { Products } from "../../interfaces/cart";

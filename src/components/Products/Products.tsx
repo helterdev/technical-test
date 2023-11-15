@@ -32,7 +32,6 @@ const Products = () => {
             <div className="container-ul">
             <Ul>
                 {isLoading ? <Loading/> :  data.map((product : ProductsApi) => { return <ProductsList products={product} key={product.id} />}) }
-                {/* isLoading ? <Loading/> */}
             </Ul>
             </div>
         </section>
