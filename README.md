@@ -1,5 +1,5 @@
-Tienda Virtual con React y TypeScript
-Este proyecto es una tienda virtual que utiliza tecnologías como React, TypeScript, React Query, useReducer, useContext, Bootstrap y StyledComponents. La tienda tiene la funcionalidad de traer productos desde una API pública, mostrarlos al usuario y permitir que el usuario elija productos que se agregarán a un carrito de compras.
+#Tienda Virtual con React y TypeScript
+##Este proyecto es una tienda virtual que utiliza tecnologías como React, TypeScript, React Query, useReducer, useContext, Bootstrap y StyledComponents. La tienda tiene la funcionalidad de traer productos desde una API pública, mostrarlos al usuario y permitir que el usuario elija productos que se agregarán a un carrito de compras.
 
 Funcionalidades
 Obtención de Productos desde API Pública: La tienda se conecta a una API pública para obtener información sobre productos. La API proporciona detalles como nombre, descripción, precio y otras características relevantes.
