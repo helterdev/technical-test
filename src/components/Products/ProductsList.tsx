@@ -3,6 +3,7 @@ import './products.css';
 import { info_color, price_color, text_primary } from "../UI/Variables";
 import Button from "../Button/Button";
 import { ProductsApi } from "../../interfaces/products";
+import { Products } from "../../interfaces/cart";
 
 
 
@@ -13,6 +14,10 @@ const List = styled.li`
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.14);
     font-family: 'Montserrat';
     list-style: none;
+    &:active{
+        transform: scale(0.99);
+        transition: 0.2s ease all;
+    }
 `;
 
 const Div = styled.div`
@@ -70,7 +75,16 @@ interface Props {
 }
 
 const ProductsList = ({products} : Props) => {
-    const {name, photo, description, price} = products;
+    const {name, photo, description, price, id} = products;
+    const cartProducts : Products = {
+        photo,
+        name,
+        id,
+        price,
+        quantity: 1
+
+    }
+    
     const priceInt = parseInt(price);
     return (
         <List>
@@ -92,7 +106,7 @@ const ProductsList = ({products} : Props) => {
                     </P>
                 </Info>
                 <div className="container-button">
-                    <Button products={products}/>
+                    <Button products={cartProducts}/>
                 </div>
             </DivContainer>
         </List>

@@ -3,6 +3,7 @@ import { bg_primary, text_primary } from "../UI/Variables";
 import { ProductsApi } from "../../interfaces/products";
 import { useContext } from "react";
 import { ProductsContext } from "../../context/ProductsContext";
+import { Products } from "../../interfaces/cart";
 
 
 const ButtonCart = styled.button`
@@ -22,12 +23,17 @@ const ButtonCart = styled.button`
     text-transform: uppercase;
     font-family: 'Montserrat';
     cursor: pointer;
+    &:hover{
+        background-color: darkblue;
+        transition: 0.2s ease-in all;
+    }
 `;
 interface Props {
-    products: ProductsApi
+    products: Products
 }
 
 const Button = ({products} : Props) => {
+    
     
     const {addProducts} = useContext(ProductsContext);
     

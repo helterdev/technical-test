@@ -13,7 +13,10 @@ const CardLi = styled.li`
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.14);
     padding: 2rem 0;
     position: relative;
-
+    &:active{
+      transition: 0.2s ease-out all;
+      transform: scale(0.99);
+    }
 `;
 
 const CardImg = styled.img`
@@ -41,7 +44,8 @@ const CardDivContainer = styled.div`
 `;
 const SideBars = () => {
 
-    const {state} = useContext(ProductsContext);
+    const {state,removeProducts, addButton, removeButton} = useContext(ProductsContext);
+      
   
     return (
 
@@ -61,7 +65,8 @@ const SideBars = () => {
                       { const price = parseInt(product.price);
                         
                       return (<CardLi className="text-center" key={product.id}>
-                          <IoIosCloseCircle className= "icon"/>
+                          <IoIosCloseCircle className= "icon" onClick={() => { removeProducts(product.id)
+                          }}/>
                           <div>
                             <CardImg src={`${product.photo}`} alt="" />
                           </div>
@@ -69,9 +74,9 @@ const SideBars = () => {
                             <CardH3>{product.name}</CardH3>
                             <div className="d-flex justify-content-around ">
                               <DivButton>
-                                <CardButton>+</CardButton>
-                                <span className="text-black px-1 ">1</span>
-                                <CardButton>-</CardButton>
+                                <CardButton onClick={() => addButton(product.id)}>+</CardButton>
+                                <span className="text-black px-1 ">{product.quantity}</span>
+                                <CardButton onClick={() => removeButton(product.id)}>-</CardButton>
                               </DivButton>
                               <Span>R${price}</Span>
                             </div>

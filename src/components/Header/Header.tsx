@@ -2,6 +2,8 @@ import {BsCartDashFill} from 'react-icons/bs';
 import styled from 'styled-components';
 import { bg_primary, text_primary } from '../UI/Variables';
 import './header.css';
+import { useContext } from 'react';
+import { ProductsContext } from '../../context/ProductsContext';
 
 
 const Header_Container = styled.header`
@@ -45,6 +47,7 @@ const Button = styled.button`
 {/* <button className="btn btn-primary" type="button" >Toggle right offcanvas</button> */}
 
 const Header = () => {
+    const {state} = useContext(ProductsContext);
     return (
         <Header_Container>
             <Box>
@@ -55,7 +58,7 @@ const Header = () => {
                 <div>
                     <Button type='button'data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                         <BsCartDashFill/>
-                        1
+                        {state.count}
                     </Button>
                 </div>
             </Box>
