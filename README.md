@@ -1,32 +1,48 @@
-#Tienda Virtual con React y TypeScript#
+
+# 💻Store with a shopping cart.
+
+Simulation of a virtual store with a shopping cart.
+
+## 👨‍💻Installation
+
+Install Store with a shppping with npm. 
+
+1.- Clone the repository to a local folder on your PC.
+Enter this code in your terminal: 
+
+```
+git clone https://github.com/helterdev/technical-test.git
+```
+
+2.- Install the dependencies of both the client folders.
+```
+npm install
+```
+
+3.- Ready, now run the project with the following scripts.
+```
+npm run dev
+```
 
 
-##Este proyecto es una tienda virtual que utiliza tecnologías como React, TypeScript, React Query, useReducer, useContext, Bootstrap y StyledComponents. La tienda tiene la funcionalidad de traer productos desde una API pública, mostrarlos al usuario y permitir que el usuario elija productos que se agregarán a un carrito de compras.
+## 📸Screenshots
 
-Funcionalidades
-Obtención de Productos desde API Pública: La tienda se conecta a una API pública para obtener información sobre productos. La API proporciona detalles como nombre, descripción, precio y otras características relevantes.
+![Home](/public/screenshots/home.png)
 
-Visualización de Productos: Los productos obtenidos se presentan de manera atractiva en la interfaz de usuario. Cada producto incluye información detallada para que los usuarios puedan tomar decisiones informadas.
+![Cart](/public/screenshots/cart.png)
 
-Selección de Productos y Carrito de Compras: Los usuarios tienen la capacidad de seleccionar productos y agregarlos al carrito de compras. El carrito muestra un resumen de los productos seleccionados, sus cantidades y el total de la compra.
 
-Tecnologías Utilizadas
-React: Biblioteca de JavaScript para construir interfaces de usuario interactivas.
+## 🛠Tech Stack
 
-TypeScript: Un superset de JavaScript que agrega tipado estático a la sintaxis de JavaScript.
+**Server:** React.js, TypeScript, React Query, FramerMotion, Bootstrap.
 
-React Query: Librería para realizar consultas de datos en React, facilitando la gestión del estado global de los datos.
 
-useReducer y useContext: Hooks de React utilizados para gestionar el estado global de la aplicación de manera eficiente.
+## 📄Feedback
 
-Bootstrap: Framework de diseño front-end que agiliza el desarrollo de interfaces responsivas.
+If you have any feedback, please reach out to us at heltherv@gmail.com
 
-StyledComponents: Biblioteca para escribir estilos en JavaScript, permitiendo la creación de componentes estilizados de manera sencilla.
 
-¡Explora la tienda, elige tus productos y disfruta de la experiencia de compra!
+## License
 
-Contribuciones
-Las contribuciones son bienvenidas. Si encuentras algún problema o tienes sugerencias para mejorar la tienda virtual, no dudes en abrir un problema o enviar un pull request.
+[MIT](https://choosealicense.com/licenses/mit/)
 
-Licencia
-Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles
